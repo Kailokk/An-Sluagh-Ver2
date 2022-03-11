@@ -406,7 +406,7 @@ GameObject:
   m_Component:
   - component: {fileID: 794397485}
   m_Layer: 0
-  m_Name: Text Window Old
+  m_Name: Text Window
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1186,8 +1186,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Padding:
-    m_Left: 0
-    m_Right: 0
+    m_Left: 10
+    m_Right: 30
     m_Top: 0
     m_Bottom: 0
   m_ChildAlignment: 0
