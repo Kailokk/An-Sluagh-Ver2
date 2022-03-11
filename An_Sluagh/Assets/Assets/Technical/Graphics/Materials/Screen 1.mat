@@ -1,0 +1,49 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Screen 1
+  m_Shader: {fileID: 4800000, guid: 6e1e54c57771b455280e52851ba36386, type: 3}
+  m_ShaderKeywords: _USEABERRATION_ON _USECONVERGENCE_ON _USECURVE_ON _USESCANLINES_ON
+    _USEVIGNETTE_ON
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _MainTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - _AbberationStrength: 0.3
+    - _Brightness: 2
+    - _CurveX: 16
+    - _CurveY: 9
+    - _DoubleOffset: 0.5
+    - _DoubleStrength: 1
+    - _LineDistributionPow: 1.7
+    - _LineScale: 0.75
+    - _LineWeight: 0.309
+    - _LineWeightMax: 0.3
+    - _LineWeightMin: 0.66
+    - _ScanSpeed: 11.53
+    - _UseConvergence: 1
+    - _UseCurve: 1
+    - _UseScanLines: 1
+    - _UseVignette: 1
+    - _VignettePower: 0.1
+    - _Zoom: 1.02
+    m_Colors:
+    - _ColourOffset: {r: 0, g: 0, b: 0, a: 0}
+    - _Params: {r: 0, g: 0, b: 0, a: 0}
+  m_BuildTextureStacks: []

@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e4990dabe2e99a24399e236d97476990, type: 3}
+  m_Name: The Bedroom
+  m_EditorClassIdentifier: 
+  openingDescription: "The Loved One lays before you, on the far side of the room.
+    Layered amongst several woolen blankets. \r\nThe chair you fell asleep in is
+    to the side of the bed. \r\nThe uneven stone floor below you has a small amount
+    of sand strewn atop. It has been several days since you or The Loved One have
+    had a chance to sweep"
+  closingDescription: 
+  entrances:
+  - {fileID: 11400000, guid: 51da506651dc2d04cbd76cd24a3eac54, type: 2}
+  objectsInRoom: []
