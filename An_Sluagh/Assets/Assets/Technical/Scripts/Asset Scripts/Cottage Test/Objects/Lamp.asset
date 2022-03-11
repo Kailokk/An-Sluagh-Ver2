@@ -12,8 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e48a60366cfe2474aa03a501714ce559, type: 3}
   m_Name: Lamp
   m_EditorClassIdentifier: 
-  keywords: []
-  objectDescriptionInRoom: 
-  Interactions: []
+  keywords:
+  - lamp
+  objectDescriptionInRoom: A lamp stands on the bedside table
+  Interactions:
+  - {fileID: 11400000, guid: 239cc39409dd01e4b816b82c08e795bc, type: 2}
+  - {fileID: 11400000, guid: c22396e1002e4e24e8add36f8bd1a3e9, type: 2}
   subObject: {fileID: 0}
   subEntrance: {fileID: 0}

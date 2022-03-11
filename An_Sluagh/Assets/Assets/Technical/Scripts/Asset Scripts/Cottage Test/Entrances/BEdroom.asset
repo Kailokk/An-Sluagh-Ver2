@@ -9,10 +9,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e4990dabe2e99a24399e236d97476990, type: 3}
-  m_Name: Kitchen
+  m_Script: {fileID: 11500000, guid: dcf76a8e477f3eb42802bb0dd05b2aed, type: 3}
+  m_Name: BEdroom
   m_EditorClassIdentifier: 
-  openingDescription: you find yourself in the kitchen
-  closingDescription: 
-  entrances: []
-  objectsInRoom: []
+  keywords: []
+  room: {fileID: 0}
+  entranceDescription: 
+  interactions: []
+  interactionObjects: []

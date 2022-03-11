@@ -57,7 +57,7 @@ public class GL_GameController : MonoBehaviour
 
     private void LoadObjects()
     {
-
+        objectsInRoom.Clear();
         if (currentRoom.objectsInRoom.Any())
         {
             foreach (AS_ObjectScript objectScript in currentRoom.objectsInRoom)
@@ -77,6 +77,8 @@ public class GL_GameController : MonoBehaviour
                     }
                     else { objectsInRoom.Add(objectScript); }
                 }
+
+
             }
         }
 
@@ -84,7 +86,7 @@ public class GL_GameController : MonoBehaviour
 
     private void LoadEntrances()
     {
-
+        entrancesInRoom.Clear();
         if (currentRoom.entrances.Any())
         {
             foreach (AS_EntranceScript entrance in currentRoom.entrances)
@@ -114,5 +116,10 @@ public class GL_GameController : MonoBehaviour
         LoadRoom(room);
     }
 
+    public void ReloadItemsAndEntrances()
+    {
+        LoadObjects();
+        LoadEntrances();
+    }
 
 }

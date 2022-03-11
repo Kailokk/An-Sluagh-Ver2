@@ -399,8 +399,8 @@ MonoBehaviour:
   SwitchSettingsMigration: 1
   HasSourceProject: 1
   HasPlatforms: 1
-  sourceProjectPath: ../../Audio/Implementation/Middleware/An_Sluagh_FMOD/An_Sluagh_FMOD.fspro
-  sourceBankPath: ../../Audio/Implementation/Middleware/An_Sluagh_FMOD/Build
+  sourceProjectPath: ../../../Audio/Implementation/Middleware/An_Sluagh_FMOD/An_Sluagh_FMOD.fspro
+  sourceBankPath: ../../../Audio/Implementation/Middleware/An_Sluagh_FMOD/Build
   SourceBankPathUnformatted: 
   BankRefreshCooldown: 5
   ShowBankRefreshWindow: 1
@@ -408,7 +408,7 @@ MonoBehaviour:
   BankLoadType: 0
   AutomaticSampleLoading: 0
   EncryptionKey: 
-  ImportType: 0
+  ImportType: 1
   TargetAssetPath: FMODBanks
   TargetBankFolder: 
   EventLinkage: 0

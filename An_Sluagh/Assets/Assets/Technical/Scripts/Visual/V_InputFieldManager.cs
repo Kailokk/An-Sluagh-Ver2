@@ -31,6 +31,15 @@ public class V_InputFieldManager : MonoBehaviour
 
     public void onEndEdit()
     {
+        if (inputField.text == "" || inputField.text == null)
+        {
+            inputField.Select();
+            inputField.ActivateInputField();
+            return;
+        }
+
+        V_AddTextEntry.Instance.CreateTextEntry(" \n \n");
+
         Debug.Log(inputField.text);
         RepeatUserCommand();
 
@@ -50,12 +59,7 @@ public class V_InputFieldManager : MonoBehaviour
     private void RepeatUserCommand()
     {
         //Checks if the user typed something, and returns if they didnt
-        if (inputField.text == "" || inputField.text == null)
-        {
-            inputField.Select();
-            inputField.ActivateInputField();
-            return;
-        }
+
         A_Terminal_Manager.Instance.PlayActionConfirmation();
 
         //test function

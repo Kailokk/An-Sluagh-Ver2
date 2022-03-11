@@ -71,7 +71,20 @@ public class V_AddTextEntry : MonoBehaviour
         }
     }
 
+    public void LogError(string text)
+    {
+        string errorMessage = "Error:\n" + text;
 
+        if (runningCoroutine == null)
+        {
+            runningCoroutine = WriteText(errorMessage);
+            StartCoroutine(runningCoroutine);
+        }
+        else
+        {
+            coroutineQueue.Enqueue(WriteText(errorMessage));
+        }
+    }
 
 
     IEnumerator runningCoroutine = null;

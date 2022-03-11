@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 37c95bb79f1b54f4e944c4c378bf4315, type: 3}
   m_Name: New AS_Interaction_examine
   m_EditorClassIdentifier: 
-  actionWords: []
-  interactionDescription: 
+  actionWords:
+  - examine
+  interactionDescription: You examine the lamp and find it's bulb is missing.
   interactionObjects: []

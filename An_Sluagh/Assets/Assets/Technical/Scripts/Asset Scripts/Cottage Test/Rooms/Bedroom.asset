@@ -12,7 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e4990dabe2e99a24399e236d97476990, type: 3}
   m_Name: Bedroom
   m_EditorClassIdentifier: 
-  openingDescription: 
-  closingDescription: 
-  entrances: []
-  objectsInRoom: []
+  openingDescription: You find yourself in your bedroom
+  closingDescription: 'There is dust all over the floor '
+  entrances:
+  - {fileID: 11400000, guid: 9857571406a929a47bb2b824ec228785, type: 2}
+  objectsInRoom:
+  - {fileID: 11400000, guid: 5667cd0ae6f815b43a751270bd5a1731, type: 2}

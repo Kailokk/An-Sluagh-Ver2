@@ -22,25 +22,27 @@ public class GL_Parser : MonoBehaviour
 
     public void ParseUserInput(string input)
     {
+        string[] inputArray = input.ToLower().Split(' ');
 
-        string[] inputArray = input.Split(' ');
-        if (FindInteractionInObjects(inputArray))
+        if (inputArray.Length >= 2)
         {
-            Debug.Log("Interaction Found In Object");
-            return;
-        }
+            if (FindInteractionInObjects(inputArray))
+            {
+                Debug.Log("Interaction Found In Object");
+                return;
+            }
 
-        if (FindInteractionInEntrances(inputArray))
-        {
-            Debug.Log("Interaction Found In Entrance");
-            return;
+            if (FindInteractionInEntrances(inputArray))
+            {
+                Debug.Log("Interaction Found In Entrance");
+                return;
+            }
         }
-
         foreach (AS_ActionsScript action in dictionary.Dictionary)
         {
             foreach (string actionWord in action.actionWords)
             {
-                if (inputArray[0] == actionWord)
+                if (inputArray[0] == actionWord.ToLower())
                 {
                     action.Interaction();
                     Debug.Log("Action Found In Dictionary");
@@ -50,7 +52,7 @@ public class GL_Parser : MonoBehaviour
         }
         ///error,input not recognised
         Debug.Log("No Action Found In Dictionary");
-
+        V_AddTextEntry.Instance.LogError("No action or keyword recognised");
     }
 
 
@@ -64,20 +66,22 @@ public class GL_Parser : MonoBehaviour
             //checks to see if the first or second entry matches any words ascribed to that object
             foreach (string objectName in objects.keywords)
             {
-                if (input[1] != null && objectName == input[1])
+                if (objectName.ToLower() == input[1])
                 {
                     //checks if any interactions in the object matches
                     foreach (AS_InteractionScript interaction in objects.Interactions)
                     {
                         foreach (string actionWord in interaction.actionWords)
                         {
-                            if (actionWord == input[0])
+                            if (actionWord.ToLower() == input[0])
                             {
                                 interaction.Interaction(objects);
                                 return true;
                             }
                         }
                     }
+                    V_AddTextEntry.Instance.LogError("You cannot take that action on this item");
+                    return true;
                 }
             }
         }
@@ -91,20 +95,21 @@ public class GL_Parser : MonoBehaviour
         {
             foreach (string entranceName in entrance.keywords)
             {
-                if (entranceName == input[1] || entranceName == input[2])
+                if (entranceName.ToLower() == input[1])
                 {
                     foreach (AS_InteractionScript interaction in entrance.interactions)
                     {
                         foreach (string actionWord in interaction.actionWords)
                         {
-                            if (input[0] == actionWord)
+                            if (input[0] == actionWord.ToLower())
                             {
                                 interaction.Interaction(entrance);
                                 return true;
                             }
                         }
                     }
-
+                    V_AddTextEntry.Instance.LogError("You cannot take that action on this entrance");
+                    return true;
                 }
             }
         }
