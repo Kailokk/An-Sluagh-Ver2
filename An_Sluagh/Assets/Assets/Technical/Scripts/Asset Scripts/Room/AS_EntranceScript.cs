@@ -13,6 +13,9 @@ public class AS_EntranceScript : ScriptableObject
     //The room that is transitioned to
     public AS_RoomScript room;
 
+    //the cinematic to be transitioned to
+    public AS_Cinematic_Information cinematic;
+
     //The description of the entrance in the given room
     [TextArea]
     public string entranceDescription;

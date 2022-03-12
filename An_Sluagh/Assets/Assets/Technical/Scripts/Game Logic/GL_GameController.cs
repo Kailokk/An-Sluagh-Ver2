@@ -27,6 +27,9 @@ public class GL_GameController : MonoBehaviour
     [SerializeField]
     private AS_RoomScript startingRoom;
 
+    [SerializeField]
+    private AS_Cinematic_Information startingCinematic;
+
     //the current room we are in
     private AS_RoomScript currentRoom;
 
@@ -35,9 +38,7 @@ public class GL_GameController : MonoBehaviour
 
     private void Start()
     {
-
-        LoadRoom(startingRoom);
-
+        DetermineStart();
     }
 
 
@@ -54,6 +55,14 @@ public class GL_GameController : MonoBehaviour
         GL_Room_Manager.Instance.ReadRoom(room);
     }
 
+
+    private void LoadCinematic(AS_Cinematic_Information cinematic)
+    {
+        currentRoom = null;
+        objectsInRoom.Clear();
+        entrancesInRoom.Clear();
+        StartCoroutine(GL_Room_Manager.Instance.ReadCinematic(cinematic, CheckCinematicOrRoom(cinematic)));
+    }
 
     private void LoadObjects()
     {
@@ -116,10 +125,63 @@ public class GL_GameController : MonoBehaviour
         LoadRoom(room);
     }
 
+    public void LoadNextCinematic(AS_Cinematic_Information cinematic)
+    {
+        LoadCinematic(cinematic);
+    }
+
     public void ReloadItemsAndEntrances()
     {
         LoadObjects();
         LoadEntrances();
     }
+
+    private bool CheckCinematicOrRoom(AS_Cinematic_Information cinematic)
+    {
+        if (cinematic.room == null && cinematic.nextCinematic != null)
+        {
+            return true;
+        }
+        if (cinematic.nextCinematic == null && cinematic.room != null)
+        {
+            return false;
+        }
+
+        Debug.LogError("Could not find cinematic or room to load");
+
+        V_AddTextEntry.Instance.LogError("No valid room or cinematic found");
+        return false;
+    }
+
+
+    private void DetermineStart()
+    {
+        if (startingCinematic != null && startingRoom == null)
+        {
+            LoadCinematic(startingCinematic);
+            return;
+        }
+        if (startingRoom != null && startingCinematic == null)
+        {
+            LoadRoom(startingRoom);
+            return;
+        }
+
+        if (startingCinematic != null && startingRoom != null)
+        {
+            V_AddTextEntry.Instance.LogError("A starting room, and starting cinematic have been provided");
+            return;
+        }
+
+        if (startingCinematic == null && startingRoom == null)
+        {
+            V_AddTextEntry.Instance.LogError("Neither A starting room, nor starting cinematic have been provided");
+            return;
+        }
+
+    }
+
+
+
 
 }

@@ -40,11 +40,10 @@ public class V_InputFieldManager : MonoBehaviour
 
         V_AddTextEntry.Instance.CreateTextEntry(" \n \n");
 
-        Debug.Log(inputField.text);
         RepeatUserCommand();
 
         //send to parser
-        GL_Parser.Instance.ParseUserInput(inputField.text);
+        GL_Parser.Instance.ParseUserInput(inputField.text.ToLower());
 
         inputField.text = "";
         inputField.Select();
@@ -67,9 +66,7 @@ public class V_InputFieldManager : MonoBehaviour
         //Takes Their Text, Spits it back out and then clears the field
         string inputText = inputField.text.ToLower();
 
-
-
-        inputText = "> " + inputText;
+        inputText = "> " + inputText + "\n";
         V_AddTextEntry.Instance.CreateTextEntry(inputText);
     }
 

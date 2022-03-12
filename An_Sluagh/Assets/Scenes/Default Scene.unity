@@ -622,7 +622,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objectsInRoom: []
   entrancesInRoom: []
-  startingRoom: {fileID: 11400000, guid: 192c430934eb0764da582f3d31f8662c, type: 2}
+  startingRoom: {fileID: 0}
+  startingCinematic: {fileID: 11400000, guid: e8c2f70b1ab007f4ebcbb31d537188d9, type: 2}
 --- !u!1 &832211515
 GameObject:
   m_ObjectHideFlags: 0

@@ -58,7 +58,7 @@ public class V_AddTextEntry : MonoBehaviour
     [SerializeField]
     private ScrollRect scroll;
 
-    public void CreateTextEntry(string text)
+    public void CreateTextEntry(string text = "\n")
     {
         if (runningCoroutine == null)
         {
@@ -97,7 +97,6 @@ public class V_AddTextEntry : MonoBehaviour
 
         // Creates a new text entry and places it within the scroll view
         GameObject entry = Instantiate(textEntryPrefab, view.transform);
-
         // Gets the Text Component and sets the text to blank, to ensure the object is the correct size
         TextMeshProUGUI textBox = entry.GetComponent<TextMeshProUGUI>();
         textBox.text = "<color=#00000000>" + text + "</color>";
@@ -108,23 +107,19 @@ public class V_AddTextEntry : MonoBehaviour
         //Loops over each character, adding in colour tags to slowly display the text letter by letter
         for (int i = 0; i < text.Length + 1; i++)
         {
+            ScrollToBottomRect();
             if (i != text.Length)
             {
                 string outputTextWithStartTag = text.Insert(i, "<color=#00000000>");
-
                 string outputText = outputTextWithStartTag.Insert(outputTextWithStartTag.Length, "</color>");
-
                 yield return new WaitForSeconds(getScrollSpeed());
-
                 A_Terminal_Manager.Instance.PlayTextTyping();
-
                 textBox.text = outputText;
             }
             else
             {
                 yield return new WaitForSeconds(getScrollSpeed());
                 textBox.text = text;
-
             }
         }
         //Starts the next coroutine
@@ -155,7 +150,7 @@ public class V_AddTextEntry : MonoBehaviour
     //resets the scroll view to the bottom when called
     private void ScrollToBottomRect()
     {
-        scroll.normalizedPosition = new Vector2(0, 0);
+        scroll.verticalNormalizedPosition = 0;
     }
 
 

@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
-
+using System.Collections;
 public class GL_Room_Manager : MonoBehaviour
 {
 
@@ -81,6 +81,26 @@ public class GL_Room_Manager : MonoBehaviour
         return objectScript.subEntrance.entranceDescription;
 
 
+    }
+
+
+    public IEnumerator ReadCinematic(AS_Cinematic_Information cinematic, bool cinematicOrRoom)
+    {
+        //bool false = room
+
+        V_AddTextEntry.Instance.CreateTextEntry(cinematic.Text);
+        V_AddTextEntry.Instance.CreateTextEntry();
+        V_AddTextEntry.Instance.CreateTextEntry();
+        yield return new WaitForSeconds(cinematic.waitTimeInSeconds);
+        if (cinematicOrRoom == false)
+        {
+            GL_GameController.Instance.LoadNewRoom(cinematic.room);
+        }
+        else
+        {
+            GL_GameController.Instance.LoadNextCinematic(cinematic.nextCinematic);
+        }
+        yield return null;
     }
 
 }
