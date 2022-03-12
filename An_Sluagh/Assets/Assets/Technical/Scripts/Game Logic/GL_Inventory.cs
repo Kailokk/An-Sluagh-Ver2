@@ -31,6 +31,17 @@ public class GL_Inventory : MonoBehaviour
     private List<AS_ObjectScript> Inventory = new List<AS_ObjectScript>();
 
 
+    public string ReturnInventoryList()
+    {
+        string output = "";
+
+        foreach (AS_ObjectScript objectScript in Inventory)
+        {
+            output += $"\n{objectScript.objectName}";
+        }
+        return output;
+    }
+
     //adds an item when the event is called
     private void addItem(AS_ObjectScript objectScript)
     {

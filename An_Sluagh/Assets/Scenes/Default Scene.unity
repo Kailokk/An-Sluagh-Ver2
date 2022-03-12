@@ -622,8 +622,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objectsInRoom: []
   entrancesInRoom: []
-  startingRoom: {fileID: 0}
-  startingCinematic: {fileID: 11400000, guid: e8c2f70b1ab007f4ebcbb31d537188d9, type: 2}
+  startingRoom: {fileID: 11400000, guid: 192c430934eb0764da582f3d31f8662c, type: 2}
+  startingCinematic: {fileID: 0}
+  currentRoom: {fileID: 0}
 --- !u!1 &832211515
 GameObject:
   m_ObjectHideFlags: 0
@@ -1508,6 +1509,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1790831892}
   - component: {fileID: 1790831893}
+  - component: {fileID: 1790831894}
+  - component: {fileID: 1790831895}
   m_Layer: 0
   m_Name: Audio Controller
   m_TagString: Untagged
@@ -1562,6 +1565,30 @@ MonoBehaviour:
       Data3: 462265739
       Data4: 1722238039
     Path: event:/Terminal/sx_terminal_screen_typing
+--- !u!114 &1790831894
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1790831891}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec56dcbd4273b054fbded98cc17eb4c8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1790831895
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1790831891}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a410849f868ef848ac5fce1018c8093, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1867927695
 GameObject:
   m_ObjectHideFlags: 0

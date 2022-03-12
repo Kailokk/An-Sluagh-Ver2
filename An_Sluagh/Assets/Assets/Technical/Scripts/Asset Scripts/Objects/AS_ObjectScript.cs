@@ -6,6 +6,7 @@ using UnityEngine;
 public class AS_ObjectScript : ScriptableObject
 {
 
+    public string objectName;
     //The list of keywords used to identify the object
     public string[] keywords;
 

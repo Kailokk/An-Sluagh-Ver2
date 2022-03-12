@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e48a60366cfe2474aa03a501714ce559, type: 3}
+  m_Name: Sink
+  m_EditorClassIdentifier: 
+  objectName: 
+  keywords:
+  - sink
+  objectDescriptionInRoom: You see the old sink before you
+  Interactions:
+  - {fileID: 11400000, guid: 8957b9068c9802a4c87cdeb887df0790, type: 2}
+  subObject: {fileID: 11400000, guid: 4539d2a60e041614fae58fb8e2439a54, type: 2}
+  subEntrance: {fileID: 0}

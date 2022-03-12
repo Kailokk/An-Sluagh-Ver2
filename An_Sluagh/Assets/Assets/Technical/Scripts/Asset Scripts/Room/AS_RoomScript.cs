@@ -22,7 +22,7 @@ public class AS_RoomScript : ScriptableObject
     public AS_ObjectScript[] objectsInRoom;
 
 
-
+    public AS_MusicInformation musicInfo;
 
 
 

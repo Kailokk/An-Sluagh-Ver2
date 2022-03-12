@@ -28,9 +28,10 @@ public class GL_Parser : MonoBehaviour
         {
             if (FindInteractionInObjects(inputArray))
             {
-                Debug.Log("Interaction Found In Object");
                 return;
             }
+
+
 
             if (FindInteractionInEntrances(inputArray))
             {
@@ -80,7 +81,7 @@ public class GL_Parser : MonoBehaviour
                             }
                         }
                     }
-                    V_AddTextEntry.Instance.LogError("You cannot take that action on this item");
+                    V_AddTextEntry.Instance.LogError("You cannot take that action on this item at this time");
                     return true;
                 }
             }
@@ -108,7 +109,7 @@ public class GL_Parser : MonoBehaviour
                             }
                         }
                     }
-                    V_AddTextEntry.Instance.LogError("You cannot take that action on this entrance");
+                    V_AddTextEntry.Instance.LogError("You cannot take that action on this entrance at this time");
                     return true;
                 }
             }

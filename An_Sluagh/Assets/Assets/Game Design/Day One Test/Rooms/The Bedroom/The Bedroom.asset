@@ -20,4 +20,6 @@ MonoBehaviour:
   closingDescription: 
   entrances:
   - {fileID: 11400000, guid: 51da506651dc2d04cbd76cd24a3eac54, type: 2}
-  objectsInRoom: []
+  objectsInRoom:
+  - {fileID: 11400000, guid: b53b461477d332f4eacf002d5fad30e7, type: 2}
+  musicInfo: {fileID: 11400000, guid: 8b300a4746de22249acb21b2503fc159, type: 2}

@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ffe41eeccb7256040902a883cc7f6d47, type: 3}
+  m_Name: Use Sinbk With Bucket
+  m_EditorClassIdentifier: 
+  actionWords:
+  - use
+  interactionDescription: you take the bucket, place it under the tap, and fill it
+    up
+  interactionObjects:
+  - {fileID: 11400000, guid: b53b461477d332f4eacf002d5fad30e7, type: 2}
+  shouldAddItemToInventory: 1

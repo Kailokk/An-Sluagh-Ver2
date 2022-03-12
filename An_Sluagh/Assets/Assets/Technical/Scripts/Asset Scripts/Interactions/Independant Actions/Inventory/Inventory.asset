@@ -9,9 +9,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a3c70fb5fe14b4440af5a7713e7fd2ff, type: 3}
-  m_Name: Dictionary
+  m_Script: {fileID: 11500000, guid: cdf760e691c90404e9fc31ad9822d96d, type: 3}
+  m_Name: Inventory
   m_EditorClassIdentifier: 
-  Dictionary:
-  - {fileID: 11400000, guid: c380187319cef0e4bb5c122dad2096c4, type: 2}
-  - {fileID: 11400000, guid: 13d197d0ecbb9aa4898c828b77a57fcd, type: 2}
+  actionWords:
+  - inventory
+  - bag
+  - items

@@ -28,5 +28,8 @@ MonoBehaviour:
     You
     can''t see The Loved One from here, you''ll have to enter the bedroom to check
     on them'
-  entrances: []
-  objectsInRoom: []
+  entrances:
+  - {fileID: 11400000, guid: 17d8604d5aed33743a17e4ca5efd750b, type: 2}
+  objectsInRoom:
+  - {fileID: 11400000, guid: 95ebab34ed26cae448a0426b9f2fb905, type: 2}
+  musicInfo: {fileID: 11400000, guid: 0b321ee67d4e4d945a1a431ab0780e5c, type: 2}

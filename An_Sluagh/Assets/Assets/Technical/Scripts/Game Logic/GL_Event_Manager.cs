@@ -36,7 +36,7 @@ public class GL_Event_Manager : MonoBehaviour
     {
         if (onAddToInventory != null)
         {
-            onAddToInventory(objectScript);
+            onRemoveFromInventory(objectScript);
         }
     }
 

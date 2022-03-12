@@ -13,7 +13,7 @@ public class AS_Cinematic_Information : ScriptableObject
     public AS_RoomScript room;
     public AS_Cinematic_Information nextCinematic;
 
-
+    public AS_MusicInformation musicInfo;
 
 
 }

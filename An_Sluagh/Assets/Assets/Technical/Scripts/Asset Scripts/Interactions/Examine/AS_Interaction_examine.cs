@@ -8,7 +8,7 @@ public class AS_Interaction_examine : AS_InteractionScript
 
     public override void Interaction(AS_ObjectScript obj)
     {
-        V_AddTextEntry.Instance.CreateTextEntry(this.interactionDescription);
+        V_AddTextEntry.Instance.CreateTextEntry(interactionDescription);
     }
 
     public override void Interaction(AS_EntranceScript entrance)

@@ -31,6 +31,7 @@ public class GL_GameController : MonoBehaviour
     private AS_Cinematic_Information startingCinematic;
 
     //the current room we are in
+    [SerializeField]
     private AS_RoomScript currentRoom;
 
 
@@ -47,7 +48,7 @@ public class GL_GameController : MonoBehaviour
     private void LoadRoom(AS_RoomScript room)
     {
         currentRoom = room;
-
+        A_MusicEventManager.Instance.ChangeMusic(room.musicInfo.musicEvent, room.musicInfo.playheadLocation);
 
         LoadObjects();
         LoadEntrances();
@@ -58,6 +59,7 @@ public class GL_GameController : MonoBehaviour
 
     private void LoadCinematic(AS_Cinematic_Information cinematic)
     {
+        A_MusicEventManager.Instance.ChangeMusic(cinematic.musicInfo.musicEvent, cinematic.musicInfo.playheadLocation);
         currentRoom = null;
         objectsInRoom.Clear();
         entrancesInRoom.Clear();
@@ -71,26 +73,26 @@ public class GL_GameController : MonoBehaviour
         {
             foreach (AS_ObjectScript objectScript in currentRoom.objectsInRoom)
             {
-                if (!GL_Inventory.Instance.CheckForItem(objectScript))
+                if (!G_InteractionTracker.Instance.CheckItemUsed(objectScript))
                 {
-                    if (G_InteractionTracker.Instance.CheckInteraction(objectScript))
+                    if (!GL_Inventory.Instance.CheckForItem(objectScript))
                     {
-                        if (objectScript.subObject != null)
+                        if (G_InteractionTracker.Instance.CheckInteraction(objectScript))
                         {
-                            objectsInRoom.Add(objectScript.subObject);
+                            if (objectScript.subObject != null)
+                            {
+                                objectsInRoom.Add(objectScript.subObject);
+                            }
+                            else
+                            {
+                                entrancesInRoom.Add(objectScript.subEntrance);
+                            }
                         }
-                        else
-                        {
-                            entrancesInRoom.Add(objectScript.subEntrance);
-                        }
+                        else { objectsInRoom.Add(objectScript); }
                     }
-                    else { objectsInRoom.Add(objectScript); }
                 }
-
-
             }
         }
-
     }
 
     private void LoadEntrances()

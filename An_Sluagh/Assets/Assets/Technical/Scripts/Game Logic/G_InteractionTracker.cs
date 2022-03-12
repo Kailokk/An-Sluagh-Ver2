@@ -27,16 +27,25 @@ public class G_InteractionTracker : MonoBehaviour
     //A list of entrances that have been interacted with.
     private List<AS_EntranceScript> EntranceInteractionList = new List<AS_EntranceScript>();
 
+    private List<AS_ObjectScript> usedItemList = new List<AS_ObjectScript>();
+
+
+
     //logs an object that has been interacted with
-    private void LogInteraction(AS_ObjectScript objectScript)
+    public void LogInteraction(AS_ObjectScript objectScript)
     {
         objectInteractionList.Add(objectScript);
     }
 
     //logs an entrance that has been interacted with
-    private void LogInteraction(AS_EntranceScript entrance)
+    public void LogInteraction(AS_EntranceScript entrance)
     {
         EntranceInteractionList.Remove(entrance);
+    }
+
+    public void LogItemUsed(AS_ObjectScript objectScript)
+    {
+        usedItemList.Add(objectScript);
     }
 
     //checks if an object has been interacted with, and returns true if it has
@@ -50,5 +59,11 @@ public class G_InteractionTracker : MonoBehaviour
     {
         return EntranceInteractionList.Contains(entrance);
     }
+
+    public bool CheckItemUsed(AS_ObjectScript objectScript)
+    {
+        return usedItemList.Contains(objectScript);
+    }
+
 
 }
