@@ -11,25 +11,18 @@ public class GL_MenuController : MonoBehaviour
     private GameObject mainMenu;
     [SerializeField]
     private GameObject optionsMenu;
+
+    [SerializeField]
+    private GameObject cursorCanvas;
     private bool menuIsActive = false;
     private bool optionsMenuOpen = false;
 
-    [SerializeField]
-    private GameObject Cursor;
-
-    [SerializeField]
-    private Camera mainCamera;
-
     private void Update()
     {
-        if (Input.GetKey(KeyCode.Escape))
+        if (Input.GetKeyDown(KeyCode.Escape))
         {
             SetMenuState();
         }
-
-        Vector2 mousePos = mainCamera.ScreenToWorldPoint(Input.mousePosition);
-        Cursor.transform.position = mousePos;
-
     }
 
     private void SetMenuState()
@@ -46,23 +39,28 @@ public class GL_MenuController : MonoBehaviour
 
     private void OpenMenu()
     {
+        menuIsActive = true;
+        Cursor.visible = false;
         ui.SetActive(true);
         mainMenu.SetActive(true);
+        cursorCanvas.SetActive(true);
     }
 
 
 
-    private void CloseMenu()
+    public void CloseMenu()
     {
         optionsMenu.SetActive(false);
         mainMenu.SetActive(false);
         ui.SetActive(false);
+        cursorCanvas.SetActive(false);
+        menuIsActive = false;
     }
 
 
 
     //connect to back and options button
-    private void ChangeMenu()
+    public void ChangeMenu()
     {
         if (optionsMenuOpen == false)
         {
@@ -78,6 +76,11 @@ public class GL_MenuController : MonoBehaviour
             optionsMenuOpen = false;
             return;
         }
+    }
+
+    public void QuitGame()
+    {
+        Application.Quit();
     }
 
 

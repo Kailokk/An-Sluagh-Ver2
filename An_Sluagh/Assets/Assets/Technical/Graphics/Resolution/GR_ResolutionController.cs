@@ -71,13 +71,23 @@ public class GR_ResolutionController : MonoBehaviour
     {
         Resolution resolution = resolutions[resolutionIndex];
         Screen.SetResolution(resolution.width, resolution.height, isFullScreen);
-
+        SaveSetting(resolutionIndex);
     }
 
 
-    // Update is called once per frame
-    void Update()
+    private void SaveSetting(int resolutionIndex)
     {
-
+        PlayerPrefs.SetFloat("Resolution", resolutionIndex);
+        PlayerPrefs.Save();
     }
+
+    private void LoadSettings()
+    {
+        if (PlayerPrefs.HasKey("Resolution"))
+        {
+            SetResolution(PlayerPrefs.GetInt("Resolution"));
+        }
+    }
+
+
 }
