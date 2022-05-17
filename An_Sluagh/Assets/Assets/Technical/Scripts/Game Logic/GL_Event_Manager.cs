@@ -52,6 +52,21 @@ public class GL_Event_Manager : MonoBehaviour
         }
 
     }
+
+
+    public event Action onTerminalBootUp;
+    public void TerminalBootUp()
+    {
+        if (onTerminalBootUp != null)
+        {
+            onTerminalBootUp();
+        }
+
+    }
+
+
+
+
     //need some function to actually end the game 
 
 

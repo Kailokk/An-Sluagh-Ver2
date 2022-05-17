@@ -39,7 +39,21 @@ public class GL_GameController : MonoBehaviour
 
     private void Start()
     {
+        //   DetermineStart();
+        GL_Event_Manager.Instance.onTerminalBootUp += BootUp;
+    }
+
+    private void BootUp()
+    {
+        StartCoroutine(BooterUp());
+    }
+
+    IEnumerator BooterUp()
+    {
+        yield return new WaitForSeconds(10);
         DetermineStart();
+
+
     }
 
 

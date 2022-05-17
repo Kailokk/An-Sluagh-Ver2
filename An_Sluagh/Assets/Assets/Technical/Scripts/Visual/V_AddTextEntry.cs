@@ -19,6 +19,16 @@ public class V_AddTextEntry : MonoBehaviour
         }
     }
 
+
+
+
+    private bool shouldShutDown = false;
+    private void ShutdownProcedure()
+    {
+        shouldShutDown = true;
+    }
+
+
     private bool shouldSpeedUp()
     {
 
@@ -115,6 +125,10 @@ public class V_AddTextEntry : MonoBehaviour
                 yield return new WaitForSeconds(getScrollSpeed());
                 A_Terminal_Manager.Instance.PlayTextTyping();
                 textBox.text = outputText;
+                if (shouldShutDown)
+                {
+                    yield break;
+                }
             }
             else
             {
@@ -173,6 +187,7 @@ public class V_AddTextEntry : MonoBehaviour
     private bool printIpsum;
     private void Start()
     {
+        GL_Event_Manager.Instance.onTerminalShutdown += ShutdownProcedure;
         if (printIpsum)
         {
             for (int i = 0; i < 100; i++)

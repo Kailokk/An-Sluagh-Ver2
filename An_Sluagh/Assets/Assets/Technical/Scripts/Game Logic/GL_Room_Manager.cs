@@ -2,24 +2,44 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 using System.Collections;
+
+[System.Serializable]
 public class GL_Room_Manager : MonoBehaviour
 {
 
-    private static GL_Room_Manager _instance;
-    public static GL_Room_Manager Instance { get { return _instance; } }
+
+    private static GL_Room_Manager _current;
+
+    public static GL_Room_Manager Instance
+    {
+        get
+        {
+            if (_current == null)
+            {
+                return _current;
+            }
+            return _current;
+        }
+        set
+        {
+            if (value != null)
+            {
+                _current = value;
+            }
+        }
+    }
+
     private void Awake()
     {
-        if (_instance != null && _instance != this)
+        if (Instance != null && Instance != this)
         {
             Destroy(this.gameObject);
         }
         else
         {
-            _instance = this;
+            Instance = this;
         }
     }
-
-
 
 
     //writes the current room when called 
