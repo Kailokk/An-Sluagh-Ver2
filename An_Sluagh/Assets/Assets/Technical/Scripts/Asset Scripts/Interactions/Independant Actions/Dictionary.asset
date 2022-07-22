@@ -15,3 +15,5 @@ MonoBehaviour:
   Dictionary:
   - {fileID: 11400000, guid: c380187319cef0e4bb5c122dad2096c4, type: 2}
   - {fileID: 11400000, guid: 13d197d0ecbb9aa4898c828b77a57fcd, type: 2}
+  - {fileID: 11400000, guid: 4e08bffabf9fd134d80c74801083ea1f, type: 2}
+  - {fileID: 11400000, guid: 9009eaa32f3530842872ea5b448c478f, type: 2}

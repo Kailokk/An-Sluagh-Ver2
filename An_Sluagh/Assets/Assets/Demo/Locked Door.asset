@@ -12,9 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e48a60366cfe2474aa03a501714ce559, type: 3}
   m_Name: Locked Door
   m_EditorClassIdentifier: 
-  objectName: 
-  keywords: []
-  objectDescriptionInRoom: 
-  Interactions: []
+  objectName: lockedDoor
+  keywords:
+  - door
+  objectDescriptionInRoom: 'You see a locked door opposite you
+
+'
+  Interactions:
+  - {fileID: 11400000, guid: 7f327e1b686ec4e428b26db579487e79, type: 2}
   subObject: {fileID: 0}
-  subEntrance: {fileID: 0}
+  subEntrance: {fileID: 11400000, guid: 10e9c62f3e07c1c4d92fb6fa106308f0, type: 2}

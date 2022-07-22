@@ -12,7 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ffe41eeccb7256040902a883cc7f6d47, type: 3}
   m_Name: unlock door
   m_EditorClassIdentifier: 
-  actionWords: []
-  interactionDescription: 
-  interactionObjects: []
+  actionWords:
+  - unlock
+  interactionDescription: you unlock the door with the key
+  interactionObjects:
+  - {fileID: 11400000, guid: fb3eb03240d60da44a685bf47dfbb13b, type: 2}
   shouldAddItemToInventory: 0

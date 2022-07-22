@@ -12,9 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e4990dabe2e99a24399e236d97476990, type: 3}
   m_Name: Room B
   m_EditorClassIdentifier: 
-  roomName: 
-  openingDescription: 
-  closingDescription: 
-  entrances: []
+  roomName: roomb
+  openingDescription: you enter room b
+  closingDescription: the floor is clear
+  entrances:
+  - {fileID: 11400000, guid: 6a8c37d4e3fe6fb46ba37d75a1dcc021, type: 2}
   objectsInRoom: []
   musicInfo: {fileID: 0}

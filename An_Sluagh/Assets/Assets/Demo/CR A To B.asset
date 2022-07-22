@@ -12,6 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e92f1e7cc0e0be044ac1b6526ab69aa2, type: 3}
   m_Name: CR A To B
   m_EditorClassIdentifier: 
-  actionWords: []
-  interactionDescription: 
-  interactionObjects: []
+  actionWords:
+  - go
+  interactionDescription: you walk through the door from room a to room b
+  interactionObjects:
+  - {fileID: 0}

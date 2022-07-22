@@ -12,11 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e48a60366cfe2474aa03a501714ce559, type: 3}
   m_Name: key
   m_EditorClassIdentifier: 
-  objectName: key To Room B
+  objectName: keyy
   keywords:
   - key
   objectDescriptionInRoom: you see a key by the door
   Interactions:
-  - {fileID: 0}
+  - {fileID: 11400000, guid: 348f2b5b3e4e85c4e9dad862ee27d7ef, type: 2}
   subObject: {fileID: 0}
   subEntrance: {fileID: 0}

@@ -12,10 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dcf76a8e477f3eb42802bb0dd05b2aed, type: 3}
   m_Name: back to a
   m_EditorClassIdentifier: 
-  entranceName: 
-  keywords: []
-  room: {fileID: 0}
+  entranceName: roomAdoor
+  keywords:
+  - a
+  - door
+  room: {fileID: 11400000, guid: 66670f21bd8025743967bc1723290abc, type: 2}
   cinematic: {fileID: 0}
-  entranceDescription: 
-  interactions: []
+  entranceDescription: the door back to room a stands behind you
+  interactions:
+  - {fileID: 11400000, guid: 6cffd0b3a2d34e64dac3e7a9072a851a, type: 2}
   interactionObjects: []
