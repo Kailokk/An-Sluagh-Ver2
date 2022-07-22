@@ -1,19 +1,30 @@
 using UnityEngine;
-
-public class GL_SaveManager
+using System.Collections.Generic;
+public class GL_SaveManager : MonoBehaviour
 {
+
+    private static GL_SaveData saveData = new GL_SaveData();
+    private static void Start()
+    {
+        saveData = new GL_SaveData();
+    }
 
     public static void SaveGame()
     {
         SaveInventory();
-        GL_SerialisationManager.Save("save", GL_SaveData.current);
+
+        GL_SerialisationManager.Save("save", saveData);
         Debug.Log("Game Saved");
     }
 
     public static void LoadGame()
     {
-        GL_SaveData.current = (GL_SaveData)GL_SerialisationManager.Load(Application.persistentDataPath + "/saves/Save.save");
+        saveData = (GL_SaveData)GL_SerialisationManager.Load(Application.persistentDataPath + "/saves/Save.save");
 
+        if (saveData.inventory == null)
+        {
+            Debug.LogError("Savedata was null");
+        }
 
         LoadInventory();
 
@@ -29,20 +40,38 @@ public class GL_SaveManager
     {
         foreach (AS_ObjectScript obj in GL_Inventory.Instance.inventory)
         {
-
-            GL_SaveData.current.inventory.Add(obj.objectName);
+            saveData.inventory.Add(obj.objectName);
+            Debug.LogAssertion($"Object Saved: {obj.objectName}");
         }
     }
-
-
 
     private static void LoadInventory()
     {
-        foreach (string obj in GL_SaveData.current.inventory)
+        List<AS_ObjectScript> newInventory = new List<AS_ObjectScript>();
+
+        if (saveData.inventory.Count > 0)
         {
-
+            foreach (string obj in saveData.inventory)
+            {
+                if (GL_AssetManager.Instance.Objects.ContainsKey(obj))
+                {
+                    newInventory.Add(GL_AssetManager.Instance.Objects[obj]);
+                }
+                else
+                {
+                    Debug.LogError($"Error: Item '{obj}' not found in asset manager");
+                }
+            }
+            GL_Inventory.Instance.inventory = newInventory;
         }
-
     }
+
+private static void SaveInteractions(){
+
+}
+private static void LoadInteractions(){
+    
+}
+
 
 }

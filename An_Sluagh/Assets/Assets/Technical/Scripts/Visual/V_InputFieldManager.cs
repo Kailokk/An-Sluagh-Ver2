@@ -73,7 +73,6 @@ public class V_InputFieldManager : MonoBehaviour
     //shuts down the terminal if user types end
     private void testTerminalShutdown(string inputText)
     {
-        Debug.Log("Test Terminal Called");
         if (inputText == "end")
         {
             Debug.Log("Shutting Down");
