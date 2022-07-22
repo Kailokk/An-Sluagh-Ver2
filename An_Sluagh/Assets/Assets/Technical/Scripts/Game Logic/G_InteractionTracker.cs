@@ -1,13 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+[System.Serializable]
 public class G_InteractionTracker : MonoBehaviour
 {
     //log items/entrances that are interacted with, make a case when displaying room to check if the item appears here or the inventory  
 
     private static G_InteractionTracker _instance;
-    public static G_InteractionTracker Instance { get { return _instance; } }
+    public static G_InteractionTracker Instance { get { return _instance; }set{_instance = value; } }
     private void Awake()
     {
         if (_instance != null && _instance != this)

@@ -2,11 +2,13 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 using System.Collections;
+
+[System.Serializable]
 public class GL_Room_Manager : MonoBehaviour
 {
 
     private static GL_Room_Manager _instance;
-    public static GL_Room_Manager Instance { get { return _instance; } }
+    public static GL_Room_Manager Instance { get { return _instance; } set{_instance = value; } }
     private void Awake()
     {
         if (_instance != null && _instance != this)
@@ -18,7 +20,6 @@ public class GL_Room_Manager : MonoBehaviour
             _instance = this;
         }
     }
-
 
 
 

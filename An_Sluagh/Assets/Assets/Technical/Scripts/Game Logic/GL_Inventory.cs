@@ -1,11 +1,11 @@
 using System;
 using System.Collections.Generic;
 using UnityEngine;
-
+[System.Serializable]
 public class GL_Inventory : MonoBehaviour
 {
     private static GL_Inventory _instance;
-    public static GL_Inventory Instance { get { return _instance; } }
+    public static GL_Inventory Instance { get { return _instance; } set { _instance = value; } }
     private void Awake()
     {
         if (_instance != null && _instance != this)
@@ -29,6 +29,12 @@ public class GL_Inventory : MonoBehaviour
 
     //Inventory
     private List<AS_ObjectScript> Inventory = new List<AS_ObjectScript>();
+
+    public List<AS_ObjectScript> inventory
+    {
+        get {return Inventory;}
+        set{this.Inventory = value;}
+    }
 
 
     public string ReturnInventoryList()

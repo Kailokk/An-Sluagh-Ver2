@@ -1,31 +1,47 @@
 using UnityEngine;
 
-public class GL_SaveManager : MonoBehaviour
+public class GL_SaveManager
 {
 
-    public void SaveGame()
+    public static void SaveGame()
     {
-        GL_SaveData.current.room_Manager = GL_Room_Manager.Instance;
-
-
+        SaveInventory();
         GL_SerialisationManager.Save("save", GL_SaveData.current);
+        Debug.Log("Game Saved");
     }
 
-    public void LoadGame()
+    public static void LoadGame()
     {
-
         GL_SaveData.current = (GL_SaveData)GL_SerialisationManager.Load(Application.persistentDataPath + "/saves/Save.save");
 
 
-        GL_Room_Manager.Instance = GL_SaveData.current.room_Manager;
+        LoadInventory();
+
+        //to test if inventory is properly implemented
+        GL_GameController.Instance.ReloadCurrentRoom();
+
+        Debug.Log("Game loaded");
+
+    }
+
+
+    private static void SaveInventory()
+    {
+        foreach (AS_ObjectScript obj in GL_Inventory.Instance.inventory)
+        {
+
+            GL_SaveData.current.inventory.Add(obj.objectName);
+        }
     }
 
 
 
-
-    private void LoadRoomManager()
+    private static void LoadInventory()
     {
+        foreach (string obj in GL_SaveData.current.inventory)
+        {
 
+        }
 
     }
 

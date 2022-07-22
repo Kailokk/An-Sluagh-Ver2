@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [CreateAssetMenu(menuName = "Terminal/Object")]
+[System.Serializable]
 public class AS_ObjectScript : ScriptableObject
 {
 

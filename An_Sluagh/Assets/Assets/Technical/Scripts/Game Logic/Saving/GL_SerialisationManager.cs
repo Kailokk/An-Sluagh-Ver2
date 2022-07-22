@@ -14,16 +14,11 @@ public class GL_SerialisationManager
         if (!Directory.Exists(Application.persistentDataPath + "/saves"))
         {
             Directory.CreateDirectory(Application.persistentDataPath + "/saves");
-
         }
         string path = Application.persistentDataPath + "/saves/" + saveName + ".save";
-
         FileStream file = File.Create(path);
-
         formatter.Serialize(file, saveData);
-
         file.Close();
-
         return true;
     }
 
@@ -51,8 +46,6 @@ public class GL_SerialisationManager
             file.Close();
             return null;
         }
-
-
     }
 
 

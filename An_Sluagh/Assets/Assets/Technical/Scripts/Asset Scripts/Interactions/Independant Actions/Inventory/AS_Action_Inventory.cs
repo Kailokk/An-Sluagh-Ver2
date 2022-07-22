@@ -13,7 +13,6 @@ public class AS_Action_Inventory : AS_ActionsScript
 
         preface += GL_Inventory.Instance.ReturnInventoryList();
 
-
         V_AddTextEntry.Instance.CreateTextEntry(preface);
 
     }

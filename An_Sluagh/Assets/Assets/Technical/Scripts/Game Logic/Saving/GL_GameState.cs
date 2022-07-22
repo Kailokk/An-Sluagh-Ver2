@@ -4,17 +4,16 @@ using UnityEngine;
 
 
 [System.Serializable]
-public class GL_SaveData
+public class GL_GameState
 {
-    private static GL_SaveData _current;
-
-    public static GL_SaveData current
+    private static GL_GameState _current;
+    public static GL_GameState current
     {
         get
         {
             if (_current == null)
             {
-                _current = new GL_SaveData();
+                _current = new GL_GameState();
             }
             return _current;
         }
@@ -29,8 +28,9 @@ public class GL_SaveData
 
 
 
-    //Inventory
-    public List<string> inventory;
+
+
+
 
 
 

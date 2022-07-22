@@ -2,11 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
-
+[System.Serializable]
 public class GL_GameController : MonoBehaviour
 {
     private static GL_GameController _instance;
-    public static GL_GameController Instance { get { return _instance; } }
+    public static GL_GameController Instance { get { return _instance; } set { _instance = value; } }
     private void Awake()
     {
         if (_instance != null && _instance != this)
@@ -18,6 +18,7 @@ public class GL_GameController : MonoBehaviour
             _instance = this;
         }
     }
+
     public List<AS_ObjectScript> objectsInRoom = new List<AS_ObjectScript>();
     public List<AS_EntranceScript> entrancesInRoom = new List<AS_EntranceScript>();
 
@@ -35,13 +36,10 @@ public class GL_GameController : MonoBehaviour
     private AS_RoomScript currentRoom;
 
 
-
-
     private void Start()
     {
         DetermineStart();
     }
-
 
 
     //loads a new room
