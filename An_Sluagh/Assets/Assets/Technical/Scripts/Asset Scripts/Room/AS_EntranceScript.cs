@@ -4,6 +4,8 @@ using UnityEngine;
 [CreateAssetMenu(menuName = "Terminal/Entrance")]
 public class AS_EntranceScript : ScriptableObject
 {
+public string entranceName;
+
     /* An object to hold entrances to other room, 
     this is to allow the flexibility describing room transitions*/
 

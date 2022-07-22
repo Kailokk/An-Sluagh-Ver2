@@ -31,8 +31,6 @@ public class GL_Parser : MonoBehaviour
                 return;
             }
 
-
-
             if (FindInteractionInEntrances(inputArray))
             {
                 Debug.Log("Interaction Found In Entrance");
@@ -46,13 +44,12 @@ public class GL_Parser : MonoBehaviour
                 if (inputArray[0] == actionWord.ToLower())
                 {
                     action.Interaction();
-                    Debug.Log("Action Found In Dictionary");
                     return;
                 }
             }
         }
         ///error,input not recognised
-        Debug.Log("No Action Found In Dictionary");
+        Debug.LogWarning("No Action Found In Dictionary");
         V_AddTextEntry.Instance.LogError("No action or keyword recognised");
     }
 

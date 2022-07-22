@@ -8,7 +8,7 @@ public class GL_Room_Manager : MonoBehaviour
 {
 
     private static GL_Room_Manager _instance;
-    public static GL_Room_Manager Instance { get { return _instance; } set{_instance = value; } }
+    public static GL_Room_Manager Instance { get { return _instance; } set { _instance = value; } }
     private void Awake()
     {
         if (_instance != null && _instance != this)
@@ -47,11 +47,15 @@ public class GL_Room_Manager : MonoBehaviour
             {
                 if (!GL_Inventory.Instance.CheckForItem(objectScript))
                 {
-                    if (G_InteractionTracker.Instance.CheckInteraction(objectScript))
+                    if (!G_InteractionTracker.Instance.CheckItemUsed(objectScript))
                     {
-                        outputList.Add(ParseObject(objectScript));
+
+                        if (G_InteractionTracker.Instance.CheckInteraction(objectScript))
+                        {
+                            outputList.Add(ParseObject(objectScript));
+                        }
+                        else { outputList.Add(objectScript.objectDescriptionInRoom); }
                     }
-                    else { outputList.Add(objectScript.objectDescriptionInRoom); }
                 }
             }
         }

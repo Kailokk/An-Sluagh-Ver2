@@ -7,7 +7,7 @@ public class G_InteractionTracker : MonoBehaviour
     //log items/entrances that are interacted with, make a case when displaying room to check if the item appears here or the inventory  
 
     private static G_InteractionTracker _instance;
-    public static G_InteractionTracker Instance { get { return _instance; }set{_instance = value; } }
+    public static G_InteractionTracker Instance { get { return _instance; } set { _instance = value; } }
     private void Awake()
     {
         if (_instance != null && _instance != this)
@@ -24,12 +24,25 @@ public class G_InteractionTracker : MonoBehaviour
 
     //A list of objects that have been interacted with
     private List<AS_ObjectScript> objectInteractionList = new List<AS_ObjectScript>();
+    public List<AS_ObjectScript> ObjectInteractionList
+    {
+        get { return objectInteractionList; }
+        set { objectInteractionList = value; }
+    }
+
     //A list of entrances that have been interacted with.
     private List<AS_EntranceScript> EntranceInteractionList = new List<AS_EntranceScript>();
-
+    public List<AS_EntranceScript> entranceInteractionList
+    {
+        get { return EntranceInteractionList; }
+        set { EntranceInteractionList = value; }
+    }
     private List<AS_ObjectScript> usedItemList = new List<AS_ObjectScript>();
-
-
+   public List<AS_ObjectScript> UsedItemList
+    {
+        get { return usedItemList; }
+        set { usedItemList = value; }
+    }
 
     //logs an object that has been interacted with
     public void LogInteraction(AS_ObjectScript objectScript)

@@ -41,11 +41,11 @@ public class GL_AssetManager : MonoBehaviour
         }
         foreach (AS_RoomScript roomScript in roomList)
         {
-            Rooms.Add(roomScript.name, roomScript);
+            Rooms.Add(roomScript.roomName, roomScript);
         }
         foreach (AS_EntranceScript entranceScript in entranceList)
         {
-            Entrances.Add(entranceScript.name, entranceScript);
+            Entrances.Add(entranceScript.entranceName, entranceScript);
         }
     }
 

@@ -34,7 +34,10 @@ public class GL_GameController : MonoBehaviour
     //the current room we are in
     [SerializeField]
     private AS_RoomScript currentRoom;
-
+    public AS_RoomScript CurrentRoom
+    {
+        get { return currentRoom; }
+    }
 
     private void Start()
     {
@@ -46,7 +49,10 @@ public class GL_GameController : MonoBehaviour
     private void LoadRoom(AS_RoomScript room)
     {
         currentRoom = room;
-        A_MusicEventManager.Instance.ChangeMusic(room.musicInfo.musicEvent, room.musicInfo.playheadLocation);
+        if (room.musicInfo != null)
+        {
+            A_MusicEventManager.Instance.ChangeMusic(room.musicInfo.musicEvent, room.musicInfo.playheadLocation);
+        }
 
         LoadObjects();
         LoadEntrances();
@@ -73,6 +79,7 @@ public class GL_GameController : MonoBehaviour
             {
                 if (!G_InteractionTracker.Instance.CheckItemUsed(objectScript))
                 {
+                    Debug.Log("Item hasn't been used: " + objectScript.objectName);
                     if (!GL_Inventory.Instance.CheckForItem(objectScript))
                     {
                         if (G_InteractionTracker.Instance.CheckInteraction(objectScript))
@@ -108,6 +115,20 @@ public class GL_GameController : MonoBehaviour
                         foreach (string actionWord in interaction.actionWords)
                             actionWordsInRoom.Add(actionWord);
                     }
+                }
+            }
+        }
+        foreach (AS_ObjectScript obj in currentRoom.objectsInRoom)
+        {
+            if (G_InteractionTracker.Instance.CheckInteraction(obj))
+            {
+                if (obj.subEntrance != null)
+                {
+                    entrancesInRoom.Add(obj.subEntrance);
+                }
+                if (obj.subObject != null)
+                {
+                    objectsInRoom.Add(obj.subObject);
                 }
             }
         }

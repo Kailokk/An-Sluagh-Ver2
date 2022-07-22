@@ -6,7 +6,7 @@ using UnityEngine;
 public class AS_RoomScript : ScriptableObject
 {
 
-
+    public string roomName;
     //The description that is read when you enter the room
     [TextArea]
     public string openingDescription;
