@@ -50,7 +50,7 @@ public class GL_Parser : MonoBehaviour
         }
         ///error,input not recognised
         Debug.LogWarning("No Action Found In Dictionary");
-        V_AddTextEntry.Instance.LogError("No action or keyword recognised");
+        V_AddTextEntry.Instance.LogError("No action or keyword found currently");
     }
 
 
@@ -71,14 +71,14 @@ public class GL_Parser : MonoBehaviour
                     {
                         foreach (string actionWord in interaction.actionWords)
                         {
-                            if (actionWord.ToLower() == input[0])
+                            if (actionWord.ToLower() == input[0].ToLower())
                             {
                                 interaction.Interaction(objects);
                                 return true;
                             }
                         }
                     }
-                    V_AddTextEntry.Instance.LogError("You cannot take that action on this item at this time");
+                    V_AddTextEntry.Instance.LogError("No keyword found");
                     return true;
                 }
             }
@@ -93,20 +93,20 @@ public class GL_Parser : MonoBehaviour
         {
             foreach (string entranceName in entrance.keywords)
             {
-                if (entranceName.ToLower() == input[1])
+                if (entranceName.ToLower() == input[1].ToLower())
                 {
                     foreach (AS_InteractionScript interaction in entrance.interactions)
                     {
                         foreach (string actionWord in interaction.actionWords)
                         {
-                            if (input[0] == actionWord.ToLower())
+                            if (input[0].ToLower() == actionWord.ToLower())
                             {
                                 interaction.Interaction(entrance);
                                 return true;
                             }
                         }
                     }
-                    V_AddTextEntry.Instance.LogError("You cannot take that action on this entrance at this time");
+                    V_AddTextEntry.Instance.LogError("No keyword found");
                     return true;
                 }
             }

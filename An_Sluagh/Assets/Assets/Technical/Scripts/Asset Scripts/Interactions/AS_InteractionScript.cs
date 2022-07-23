@@ -6,7 +6,12 @@ using UnityEngine;
 public abstract class AS_InteractionScript : ScriptableObject
 {
     //The word/s used to engage the interaction
-    public string[] actionWords;
+    public string[] ActionWords;
+
+    public abstract string[] actionWords
+    {
+        get;
+    }
 
     //The description of what happens 
     [TextArea]

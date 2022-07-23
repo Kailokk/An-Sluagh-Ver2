@@ -11,6 +11,16 @@ public class AS_Interaction_UseWithItem : AS_InteractionScript
     //store in used items list
     //remove item from inventory
 
+    public override string[] actionWords
+    {
+        get {
+            
+             string[] defaultActionWords = new string[] {"use", "USE","Usee","apply","handle","manipulate"}; 
+             string[] appendedActionWords= defaultActionWords.Concat(ActionWords).ToArray();
+             return appendedActionWords;
+            }
+    }
+
     public override void Interaction(AS_ObjectScript obj)
     {
 

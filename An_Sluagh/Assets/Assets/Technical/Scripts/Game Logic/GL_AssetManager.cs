@@ -36,7 +36,6 @@ public class GL_AssetManager : MonoBehaviour
     {
         foreach (AS_ObjectScript objectScript in objectList)
         {
-            Debug.Log($"Object added to asset manager object list: {objectScript.objectName}");
             Objects.Add(objectScript.objectName, objectScript);
         }
         foreach (AS_RoomScript roomScript in roomList)

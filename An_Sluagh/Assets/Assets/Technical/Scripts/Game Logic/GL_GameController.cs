@@ -79,7 +79,6 @@ public class GL_GameController : MonoBehaviour
             {
                 if (!G_InteractionTracker.Instance.CheckItemUsed(objectScript))
                 {
-                    Debug.Log("Item hasn't been used: " + objectScript.objectName);
                     if (!GL_Inventory.Instance.CheckForItem(objectScript))
                     {
                         if (G_InteractionTracker.Instance.CheckInteraction(objectScript))
