@@ -28,5 +28,6 @@ MonoBehaviour:
     the beach.'
   entrances:
   - {fileID: 11400000, guid: fdd83c9d11029134ca82011519ada45a, type: 2}
+  - {fileID: 11400000, guid: 69c43d70fa69edd43be8870d3386ce35, type: 2}
   objectsInRoom: []
   musicInfo: {fileID: 0}

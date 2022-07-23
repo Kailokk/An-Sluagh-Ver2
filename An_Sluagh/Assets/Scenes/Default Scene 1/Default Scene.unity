@@ -572,6 +572,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2a57436860c9a2846adc1e55478b21e2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Inventory: []
 --- !u!114 &828977181
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -623,8 +624,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objectsInRoom: []
   entrancesInRoom: []
-  startingRoom: {fileID: 11400000, guid: 335aa184a1216414faef7160dafca113, type: 2}
-  startingCinematic: {fileID: 0}
+  startingRoom: {fileID: 0}
+  startingCinematic: {fileID: 11400000, guid: 0820a0b98bd6bfa4097ecfe36aa9ea22, type: 2}
   currentRoom: {fileID: 0}
 --- !u!114 &828977185
 MonoBehaviour:

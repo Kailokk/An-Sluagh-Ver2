@@ -28,6 +28,7 @@ public class GL_Inventory : MonoBehaviour
 
 
     //Inventory
+    [SerializeField]
     private List<AS_ObjectScript> Inventory = new List<AS_ObjectScript>();
 
     public List<AS_ObjectScript> inventory

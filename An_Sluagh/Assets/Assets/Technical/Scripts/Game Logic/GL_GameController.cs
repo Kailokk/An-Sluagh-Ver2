@@ -63,7 +63,10 @@ public class GL_GameController : MonoBehaviour
 
     private void LoadCinematic(AS_Cinematic_Information cinematic)
     {
-        A_MusicEventManager.Instance.ChangeMusic(cinematic.musicInfo.musicEvent, cinematic.musicInfo.playheadLocation);
+        if (cinematic.musicInfo != null)
+        {
+            A_MusicEventManager.Instance.ChangeMusic(cinematic.musicInfo.musicEvent, cinematic.musicInfo.playheadLocation);
+        }
         currentRoom = null;
         objectsInRoom.Clear();
         entrancesInRoom.Clear();
@@ -167,9 +170,9 @@ public class GL_GameController : MonoBehaviour
             return false;
         }
 
-        Debug.LogError("Could not find cinematic or room to load");
+    //    Debug.LogError("Could not find cinematic or room to load");
 
-        V_AddTextEntry.Instance.LogError("No valid room or cinematic found");
+       // V_AddTextEntry.Instance.LogError("No valid room or cinematic found");
         return false;
     }
 

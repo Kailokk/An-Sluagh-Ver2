@@ -20,9 +20,10 @@ MonoBehaviour:
     upturned between the home and the turf shed."
   closingDescription: 'You can see the winding path down along the cliff face to
     the beach that you''ve carved with your boat over the years. The pathway to the
-    crossroads is through the opening in the wall  '
+    well is through the opening in the wall.  '
   entrances:
   - {fileID: 11400000, guid: 81afe8911d413d349a35293a7b539fe2, type: 2}
   - {fileID: 11400000, guid: 714f2ea2f62277d4ba9b60c8b1bcc148, type: 2}
+  - {fileID: 11400000, guid: 77a12237ff434064e890080b75cd7dbd, type: 2}
   objectsInRoom: []
   musicInfo: {fileID: 0}

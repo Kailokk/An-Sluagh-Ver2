@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ffe41eeccb7256040902a883cc7f6d47, type: 3}
+  m_Name: D1_UseWell_interaction
+  m_EditorClassIdentifier: 
+  ActionWords:
+  - fill
+  - lower
+  - attach
+  interactionDescription: 'You tie your bucket to the rope, and lower it down into
+    the well.
+
+
+    As you hoist it up you notice a large black feather, like that
+    of a crow, only much bigger than any crow feather you''ve seen before. You remove
+    the feather and examine it closer.
+
+    It''s a very intresting subject, but
+    you don''t have the time to show it to someone now. You stuff it in your pocket.'
+  interactionObjects:
+  - {fileID: 11400000, guid: 90c5dae8c21718f47bb9d56acdb72231, type: 2}
+  shouldAddItemToInventory: 1

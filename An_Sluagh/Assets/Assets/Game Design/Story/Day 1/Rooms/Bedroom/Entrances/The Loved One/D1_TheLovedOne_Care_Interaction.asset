@@ -12,11 +12,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e92f1e7cc0e0be044ac1b6526ab69aa2, type: 3}
   m_Name: D1_TheLovedOne_Care_Interaction
   m_EditorClassIdentifier: 
-  ActionWords: []
+  ActionWords:
+  - care
+  - soothe
+  - cool
+  - aid
+  - help
+  - tend
   interactionDescription: You take the rag, dip it in the bucket of water and place
     it gently on their forhead. After some time you see a touch of colour return
     to the loved ones face. Later in the evening the stir awake enough that you can
     geet them to eat a small piece of bread.
   interactionObjects:
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 11400000, guid: 00546855e4497e141ab12e2debbfb2fd, type: 2}
+  - {fileID: 11400000, guid: 8db5149c62c387c4ebcf117e174a013a, type: 2}
