@@ -12,10 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 37c95bb79f1b54f4e944c4c378bf4315, type: 3}
   m_Name: D1_TheLovedOne_Examine_interaction
   m_EditorClassIdentifier: 
-  actionWords:
-  - examine
-  - EXAMINE
-  - Examine
+  ActionWords: []
   interactionDescription: The Loved One has barely stirred since last you checked
     on them. Their temperature is still high, you need to find a way to cool them
     down.

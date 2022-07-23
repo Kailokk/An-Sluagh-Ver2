@@ -9,9 +9,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bce4b6e399d3a1141b6073c0cc73170f, type: 3}
-  m_Name: D1_EmptyBucket_take_interaction
+  m_Script: {fileID: 11500000, guid: e92f1e7cc0e0be044ac1b6526ab69aa2, type: 3}
+  m_Name: D1_Skullery_Outside_interaction
   m_EditorClassIdentifier: 
-  ActionWords: []
-  interactionDescription: 
+  ActionWords:
+  - leave
+  - exit
+  interactionDescription: You open the door and walk outside.
   interactionObjects: []

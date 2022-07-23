@@ -12,9 +12,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e4990dabe2e99a24399e236d97476990, type: 3}
   m_Name: D1_Skullery_room
   m_EditorClassIdentifier: 
-  roomName: 
-  openingDescription: 
-  closingDescription: 
-  entrances: []
-  objectsInRoom: []
+  roomName: D1_SKULLERY
+  openingDescription: 'You can see the ocean stretch out from the kitchen window,
+    calm as a slumbering child. The sun shines through the clouds, casting it''s
+    beams down like a fisherman''s spear.
+
+    
+
+    The minimal scullery kitchen
+    is neat and tidy. The few utensils you have are held on a rack above the small
+    food preparation area, next to the wash basin.'
+  closingDescription: 'The old wooden front door that leads outside is to your left.
+
+    
+
+    You
+    can''t see The Loved One from here, you''ll have to enter the bedroom if you
+    want to check on them'
+  entrances:
+  - {fileID: 11400000, guid: fb5a05a109ca1e14dbff4b0b00eb416a, type: 2}
+  - {fileID: 11400000, guid: 655d40d616e8c524c99fe717411312cc, type: 2}
+  objectsInRoom:
+  - {fileID: 11400000, guid: 044747634ff23194ab13104432e503cd, type: 2}
+  - {fileID: 11400000, guid: 90c5dae8c21718f47bb9d56acdb72231, type: 2}
   musicInfo: {fileID: 0}

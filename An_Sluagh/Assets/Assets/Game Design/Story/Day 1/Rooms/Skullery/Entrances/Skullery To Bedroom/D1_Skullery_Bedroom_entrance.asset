@@ -12,10 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dcf76a8e477f3eb42802bb0dd05b2aed, type: 3}
   m_Name: D1_Skullery_Bedroom_entrance
   m_EditorClassIdentifier: 
-  entranceName: 
-  keywords: []
-  room: {fileID: 0}
+  entranceName: D1_skullery To bedroom
+  keywords:
+  - room
+  - bed
+  room: {fileID: 11400000, guid: 335aa184a1216414faef7160dafca113, type: 2}
   cinematic: {fileID: 0}
   entranceDescription: 
-  interactions: []
+  interactions:
+  - {fileID: 11400000, guid: 603da9285b2513e4482c9f0031c33613, type: 2}
   interactionObjects: []

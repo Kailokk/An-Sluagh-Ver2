@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: D1_Skullery_Bedroom_interaction
   m_EditorClassIdentifier: 
   ActionWords: []
-  interactionDescription: 
+  interactionDescription: You cross the threshold back into the bedroom.
   interactionObjects: []

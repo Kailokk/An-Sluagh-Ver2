@@ -12,9 +12,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e4990dabe2e99a24399e236d97476990, type: 3}
   m_Name: D1_Bedroom_room
   m_EditorClassIdentifier: 
-  roomName: 
-  openingDescription: 
-  closingDescription: 
-  entrances: []
-  objectsInRoom: []
+  roomName: D1_Bedroom
+  openingDescription: "The Loved One lays before you, on the far side of the room.
+    Layered amongst several woolen blankets. \r\n\nThe chair you fell asleep in is
+    to the side of the bed. \r\nThe uneven stone floor below you has a small amount
+    of sand strewn atop. \n\nIt has been several days since you or The Loved One
+    have had a chance to sweep"
+  closingDescription: The entrance to the scullery stands behind you, between the
+    exterior wall, and the shared fireplace.
+  entrances:
+  - {fileID: 11400000, guid: a1c15571b27d5534e8e3fe084ba009bf, type: 2}
+  - {fileID: 11400000, guid: 4a4b836df9d7b854cbc07c49c90b063a, type: 2}
+  objectsInRoom:
+  - {fileID: 11400000, guid: caed5ba2d61b05a46a19ffdff6cfa090, type: 2}
+  - {fileID: 11400000, guid: 8db5149c62c387c4ebcf117e174a013a, type: 2}
+  - {fileID: 11400000, guid: 044747634ff23194ab13104432e503cd, type: 2}
   musicInfo: {fileID: 0}

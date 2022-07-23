@@ -12,8 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 28ee9d209ba20924b8210fe8c7d8ce67, type: 3}
   m_Name: D1_Intro_cin
   m_EditorClassIdentifier: 
-  Text: 
-  waitTimeInSeconds: 1
+  Text: "The sea stretches out before in all directions. The water holds with an
+    eerie stillness, like a blanket of silk reaching out towards the horizon. \n\nYou
+    take a moment to glance over your shoulder, towards the back of your currach.
+    The coast has disappeared from view. You panic, and as you begin to stand, you
+    feel as if a wave lapped up against the side of the boat. You feel yourself lurch
+    forward and..."
+  waitTimeInSeconds: 3
   room: {fileID: 0}
-  nextCinematic: {fileID: 0}
+  nextCinematic: {fileID: 11400000, guid: 5218b4180aad2d84aaa2113d11bf1468, type: 2}
   musicInfo: {fileID: 0}

@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 37c95bb79f1b54f4e944c4c378bf4315, type: 3}
   m_Name: D1_Fireplace_Examine_interaction
   m_EditorClassIdentifier: 
-  actionWords: []
-  interactionDescription: 
+  ActionWords: []
+  interactionDescription: The fire has faltered during the night, and now only embers
+    remain.
   interactionObjects: []

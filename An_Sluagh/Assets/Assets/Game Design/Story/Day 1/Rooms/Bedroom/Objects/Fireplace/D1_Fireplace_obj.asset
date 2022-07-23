@@ -18,6 +18,7 @@ MonoBehaviour:
   - fireplace
   - pit
   objectDescriptionInRoom: 
-  Interactions: []
+  Interactions:
+  - {fileID: 11400000, guid: 4dd4fdaf1508faf4aaca8d4bf96ee28c, type: 2}
   subObject: {fileID: 0}
   subEntrance: {fileID: 0}

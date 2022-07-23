@@ -12,10 +12,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dcf76a8e477f3eb42802bb0dd05b2aed, type: 3}
   m_Name: D1_TheLovedOne_entrance
   m_EditorClassIdentifier: 
-  entranceName: 
-  keywords: []
+  entranceName: D1 TheLovedOne transition to day 2
+  keywords:
+  - the
+  - love
+  - loved
+  - one
   room: {fileID: 0}
   cinematic: {fileID: 0}
-  entranceDescription: 
-  interactions: []
+  entranceDescription: The Loved One's condition has not improved since last night.
+    Their fever has crept across their face, leaving beads of sweat upon their brow,
+    sullen eyelids, and a paleness in their cheeks.
+  interactions:
+  - {fileID: 11400000, guid: 588d5c94356f65a4bbd970a9e9628f52, type: 2}
+  - {fileID: 11400000, guid: 83aa85b15d7e8fa42b4bd663eb9dfaac, type: 2}
   interactionObjects: []

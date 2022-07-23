@@ -10,17 +10,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: dcf76a8e477f3eb42802bb0dd05b2aed, type: 3}
-  m_Name: D1_Bedroom_Skullery_entrance
+  m_Name: D1_Beach_Outside_entrance
   m_EditorClassIdentifier: 
-  entranceName: D1 Bedroom To Skullery
+  entranceName: D1_beach to outside
   keywords:
-  - door
-  - kitchen
-  - skullery
-  - entrance
-  room: {fileID: 11400000, guid: 34ef5ff4c445d31479510fdcaede87dc, type: 2}
+  - outside
+  - cottage
+  - home
+  - house
+  - back
+  room: {fileID: 11400000, guid: 6c1e9c1a9b2a9f744b624d2bf14e731e, type: 2}
   cinematic: {fileID: 0}
   entranceDescription: 
   interactions:
-  - {fileID: 11400000, guid: e885b951eb9caee46a155b90bbdecb22, type: 2}
+  - {fileID: 11400000, guid: e90efc920e3f3e641abb6050c6ad66c4, type: 2}
   interactionObjects: []

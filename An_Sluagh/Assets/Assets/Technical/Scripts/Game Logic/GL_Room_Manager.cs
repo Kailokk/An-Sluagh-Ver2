@@ -26,6 +26,7 @@ public class GL_Room_Manager : MonoBehaviour
     //writes the current room when called 
     public void ReadRoom(AS_RoomScript currentRoom)
     {
+
         string output = currentRoom.openingDescription;
         List<string> outputList = new List<string>();
 
@@ -54,7 +55,13 @@ public class GL_Room_Manager : MonoBehaviour
                         {
                             outputList.Add(ParseObject(objectScript));
                         }
-                        else { outputList.Add(objectScript.objectDescriptionInRoom); }
+                        else
+                        {
+                            if (!(objectScript.objectDescriptionInRoom == ""))
+                            {
+                                outputList.Add(objectScript.objectDescriptionInRoom);
+                            }
+                        }
                     }
                 }
             }
@@ -68,6 +75,8 @@ public class GL_Room_Manager : MonoBehaviour
         {
             output = string.Join("\n", output, text);
         }
+
+V_AddTextEntry.Instance.CreateTextEntry("=====================================================================");
 
         V_AddTextEntry.Instance.CreateTextEntry(output);
 

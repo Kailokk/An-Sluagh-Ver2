@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e4990dabe2e99a24399e236d97476990, type: 3}
+  m_Name: D1_Beach_room
+  m_EditorClassIdentifier: 
+  roomName: D1_beach
+  openingDescription: 'The Tide has receded passed the stone-laden upper portion
+    of the beach.
+
+    Gentle waves lap against the sandy shore. The sky is clear
+    and beams of sunlight shine down onto the subdued ocean.'
+  closingDescription: 'You can see further down the beach, where the entrance to
+    the cave is, obfuscated slightly by an out-cropping in the cliff side.
+
+    
+
+    The
+    path back up to the cottage is  visible through the tall reeds at the edge of
+    the beach.'
+  entrances:
+  - {fileID: 11400000, guid: fdd83c9d11029134ca82011519ada45a, type: 2}
+  objectsInRoom: []
+  musicInfo: {fileID: 0}

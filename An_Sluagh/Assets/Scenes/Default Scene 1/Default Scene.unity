@@ -430,7 +430,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 1820, y: 1334.5}
+  m_SizeDelta: {x: 1795.141, y: 1334.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &806000381
 GameObject:
@@ -623,7 +623,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objectsInRoom: []
   entrancesInRoom: []
-  startingRoom: {fileID: 11400000, guid: 66670f21bd8025743967bc1723290abc, type: 2}
+  startingRoom: {fileID: 11400000, guid: 335aa184a1216414faef7160dafca113, type: 2}
   startingCinematic: {fileID: 0}
   currentRoom: {fileID: 0}
 --- !u!114 &828977185
@@ -639,12 +639,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectList:
-  - {fileID: 11400000, guid: fb3eb03240d60da44a685bf47dfbb13b, type: 2}
+  - {fileID: 11400000, guid: caed5ba2d61b05a46a19ffdff6cfa090, type: 2}
   - {fileID: 11400000, guid: e99a5e60c82d0f742889872190e1e707, type: 2}
   entranceList:
-  - {fileID: 11400000, guid: 10e9c62f3e07c1c4d92fb6fa106308f0, type: 2}
+  - {fileID: 11400000, guid: a1c15571b27d5534e8e3fe084ba009bf, type: 2}
   roomList:
-  - {fileID: 11400000, guid: 66670f21bd8025743967bc1723290abc, type: 2}
+  - {fileID: 11400000, guid: 335aa184a1216414faef7160dafca113, type: 2}
   - {fileID: 11400000, guid: 5b1232ebcb464c845bebeeaf715c27aa, type: 2}
 --- !u!1 &832211515
 GameObject:
@@ -1194,7 +1194,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 10, y: 0.000030517578}
-  m_SizeDelta: {x: 1890, y: 0}
+  m_SizeDelta: {x: 1793, y: 0}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &1228342253
 MonoBehaviour:
@@ -1625,6 +1625,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Menu
       objectReference: {fileID: 0}
+    - target: {fileID: 1038750339223301548, guid: 718751656774f7d4ea6ad213e584e409, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1038750339223301549, guid: 718751656774f7d4ea6ad213e584e409, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -1667,6 +1671,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1038750339223301549, guid: 718751656774f7d4ea6ad213e584e409, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1038750339382980680, guid: 718751656774f7d4ea6ad213e584e409, type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1597746729405438641, guid: 718751656774f7d4ea6ad213e584e409, type: 3}
